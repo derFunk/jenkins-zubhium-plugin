@@ -40,6 +40,7 @@ public class ZubhiumUploader {
         String secretKey;
         String releaseNotes;
         File apk;
+        // Optional:
         String userGroups;
         String proguardMapping;
         
@@ -73,10 +74,10 @@ public class ZubhiumUploader {
         entity.addPart("releasenotes", new StringBody(ur.releaseNotes));
         entity.addPart("apk", new FileBody(ur.apk));
 
-        if (ur.userGroups.length() > 0)
+        if (ur.userGroups != null && ur.userGroups.length() > 0)
             entity.addPart("usergroups", new StringBody(ur.userGroups));
         
-        if (ur.proguardMapping.length() > 0)
+        if (ur.proguardMapping != null && ur.proguardMapping.length() > 0)
             entity.addPart("proguardmapping", new StringBody(ur.proguardMapping));
         
         httpPost.setEntity(entity);

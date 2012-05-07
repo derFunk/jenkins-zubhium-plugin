@@ -12,7 +12,7 @@
   <f:entry title="Secret App Key" field="secretKey">
     <f:textbox />
   </f:entry>
-  <f:entry title="APK File" field="apk">
+  <f:entry title="APK File" field="apkPath">
     <f:textbox />
   </f:entry>
   <f:entry title="Release Notes" field="releaseNotes">
