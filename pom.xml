@@ -10,7 +10,7 @@
   <artifactId>zubhium</artifactId>
   <name>Zubhium Plugin</name>
   <description>Uploads Android .apk files to www.zubhium.com</description>
-  <version>0.1.2-SNAPSHOT</version>
+  <version>0.1.2</version>
   <packaging>hpi</packaging>
 
   <!-- get every artifact through repo.jenkins-ci.org, which proxies all the artifacts that we need -->
