@@ -29,9 +29,9 @@
   </pluginRepositories>
 
   <scm>
-    <connection>scm:git:git://github.com/derFunk/jenkins-zubhium-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:/derFunk/jenkins-zubhium-plugin.git</developerConnection>
-    <url>https://github.com/derFunk/jenkins-zubhium-plugin</url>
+    <connection>scm:git:git://github.com/jenkinsci/zubhium-plugin.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/jenkinsci/zubhium-plugin.git</developerConnection>
+    <url>https://github.com/jenkinsci/zubhium-plugin</url>
   </scm>
 
   <url>http://wiki.jenkins-ci.org/display/JENKINS/Zubhium+Plugin</url>
@@ -39,9 +39,9 @@
 
   <developers>
     <developer>
-      <id>jweinberg</id>
-      <name>Joshua Weinberg</name>
-      <email>joshuacweinberg@gmail.com</email>
+      <id>derFunk</id>
+      <name>Andreas Katzig</name>
+      <email>mail@derfunk.com</email>
     </developer>
   </developers>
 
