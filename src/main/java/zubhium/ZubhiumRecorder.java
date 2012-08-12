@@ -62,6 +62,12 @@ public class ZubhiumRecorder extends Recorder
         return this.apkPath;
     }
     
+    private Boolean replace;
+    public Boolean getReplace()
+    {
+        return this.replace;
+    }
+    
     private String userGroups;
     public String getUserGroups()
     {
@@ -99,11 +105,12 @@ public class ZubhiumRecorder extends Recorder
     }
 
     @DataBoundConstructor
-    public ZubhiumRecorder(String secretKey, String releaseNotes, String apkPath, String userGroups,String proxyHost, String proxyUser, String proxyPass, int proxyPort)
+    public ZubhiumRecorder(String secretKey, String releaseNotes, Boolean replace, String apkPath, String userGroups,String proxyHost, String proxyUser, String proxyPass, int proxyPort)
     {
         this.secretKey = secretKey;
         this.releaseNotes = releaseNotes;
         this.apkPath = apkPath;
+        this.replace = replace;
         this.userGroups = userGroups;
         
         this.proxyHost = proxyHost;
@@ -128,7 +135,7 @@ public class ZubhiumRecorder extends Recorder
         if (build.getResult().isWorseOrEqualTo(Result.FAILURE))
             return false;
 
-        listener.getLogger().println("Uploading to zubhium");
+        listener.getLogger().println("Uploading to Zubhium");
 
         File tempDir = null;
         try
@@ -247,7 +254,8 @@ public class ZubhiumRecorder extends Recorder
         ur.userGroups = vars.expand(userGroups);
         ur.proguardMapping =  vars.expand(proguardMapping);
         ur.apk = apk;
-
+        ur.replace = replace;
+        
         // Proxy data:
         ur.proxyHost = proxyHost;
         ur.proxyPass = proxyPass;

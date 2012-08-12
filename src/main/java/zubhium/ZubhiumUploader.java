@@ -40,6 +40,8 @@ public class ZubhiumUploader {
         String secretKey;
         String releaseNotes;
         File apk;
+        Boolean replace;
+        
         // Optional:
         String userGroups;
         String proguardMapping;
@@ -73,7 +75,8 @@ public class ZubhiumUploader {
         entity.addPart("secretkey", new StringBody(ur.secretKey));
         entity.addPart("releasenotes", new StringBody(ur.releaseNotes));
         entity.addPart("apk", new FileBody(ur.apk));
-
+        entity.addPart("replace", new StringBody((ur.replace) ? "true" : "false"));
+        
         if (ur.userGroups != null && ur.userGroups.length() > 0)
             entity.addPart("usergroups", new StringBody(ur.userGroups));
         

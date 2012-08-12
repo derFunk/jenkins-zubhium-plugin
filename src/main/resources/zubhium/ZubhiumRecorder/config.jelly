@@ -3,6 +3,7 @@
     This jelly script is used for per-project configuration.
 
     See global.jelly for a general discussion about jelly script.
+    http://jenkins-ci.org/maven-site/hudson-core/jelly-taglib-ref.html
   -->
 
   <!--
@@ -15,17 +16,20 @@
   <f:entry title="APK File" field="apkPath">
     <f:textbox />
   </f:entry>
-  <f:entry title="Release Notes" field="releaseNotes">
-    <f:textarea />
-  </f:entry>
+	<f:entry title="Release Notes" field="releaseNotes">
+		<f:textarea />
+	</f:entry>
   
   <f:advanced>
+    <f:entry title="Replace Build" field="replace">
+        <f:checkbox />
+    </f:entry>
     <f:entry title="User Groups, comma separated" field="userGroups">
         <f:textbox />
     </f:entry>
-  <f:entry title="Proguard Mapping " field="proguardMapping ">
-    <f:textarea />
-  </f:entry>
+	<f:entry title="Proguard Mapping " field="proguardMapping ">
+		<f:textarea />
+	</f:entry>
   
     <f:entry title="Proxy Host" field="proxyHost">
         <f:textbox />
